@@ -17,7 +17,7 @@ The app uses Ollama's local chat API at `http://127.0.0.1:11434`. Choose another
 
 ## Demo
 
-Run the steps above, enter fictional or personal memories, and choose **Light the lantern**. The generated text appears as a keepsake card; use **Save draft** to store it in this browser or **Print / save PDF** to keep a copy. Nothing is uploaded.
+**Hosted UI preview:** https://wafulaeliah373-jpg.github.io/memory-lantern/ (static fictional sample; it does not call a model). For the working AI demo, run the steps above, enter memories, and choose **Light the lantern**. The generated text appears as a keepsake card; use **Save draft** to store it in this browser or **Print / save PDF** to keep a copy. Nothing is uploaded.
 
 ## Built with
 

@@ -1,0 +1,44 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#191b2b">
+  <title>Memory Lantern — preview</title>
+  <link rel="stylesheet" href="../style.css">
+  <style>
+    .preview-banner{margin:0 auto 28px;max-width:720px;padding:12px 16px;border:1px solid #ead8b2;border-radius:8px;background:#fff7e5;color:#6d5834;text-align:center;font-size:12px;line-height:1.5}
+    .preview-card{max-width:620px;margin:0 auto;background:#f8f0e6;border:1px solid #eee1d0;border-radius:4px 4px 18px 18px;padding:35px 38px;text-align:center;box-shadow:0 8px 18px #32233010}
+    .preview-card .candle{width:28px;height:39px;margin:0 auto 19px;background:linear-gradient(90deg,#e4d3b3,#fff1d1,#e1c9a4);border-radius:3px;box-shadow:0 0 35px #e7b55155;position:relative}
+    .preview-card .candle:before{content:"";position:absolute;width:10px;height:17px;left:9px;top:-14px;border-radius:50%;background:#e7ac4e}
+    .preview-card h2{font:600 25px 'Playfair Display',serif;color:#58495a;margin:9px 0 14px}
+    .preview-card p{font:15px/1.9 'Playfair Display',serif;color:#534653;margin:0;white-space:pre-line}
+    .preview-card .divider{color:#d29d53;margin:26px 0 10px}
+    .sample-button{display:block;margin:22px auto 0;border:0;border-radius:7px;background:#744f68;color:#fff;padding:12px 18px;font:600 13px 'DM Sans',sans-serif;cursor:pointer}
+    .sample-button:hover{background:#5f3b55}
+    .source-link{text-align:center;font-size:12px;margin:24px auto;color:#77727c}
+    .source-link a{color:#744f68}
+    @media(max-width:600px){.preview-card{padding:28px 22px}}
+  </style>
+</head>
+<body>
+  <header class="topbar"><a class="brand" href="./"><span class="brand-mark">✳</span> memory lantern</a><span class="privacy"><span class="dot"></span> Private by design</span></header>
+  <main>
+    <section class="intro">
+      <div class="eyebrow"><span>✳</span> A little light for remembering</div>
+      <h1>Keep their stories<br><em>close to the light.</em></h1>
+      <p class="lede">A quiet place to gather memories and shape them into a keepsake. In the full app, Gemma runs locally through Ollama.</p>
+    </section>
+    <p class="preview-banner"><strong>Static preview:</strong> the example below is fictional sample copy, not AI output. For real local Gemma generation, see the <a href="../README.md">setup guide</a>.</p>
+    <article class="preview-card">
+      <div class="candle" aria-hidden="true"></div>
+      <h2>For Nana</h2>
+      <p id="sample">She hummed old songs while breakfast warmed on rainy Sundays. We remember the easy kindness in her kitchen, the marigolds bright by the window, and the way a familiar melody could make a whole morning feel like home.</p>
+      <div class="divider">✳</div><span class="card-note">FICTIONAL EXAMPLE · STATIC PREVIEW</span>
+    </article>
+    <button class="sample-button" id="sampleButton" type="button">Show the fictional sample again</button>
+    <p class="source-link">Open source, local setup, and privacy details: <a href="https://github.com/wafulaeliah373-jpg/memory-lantern">GitHub repository</a></p>
+    <footer>Made for the stories that stay with us <span>✳</span></footer>
+  </main>
+  <script>document.querySelector('#sampleButton').addEventListener('click',()=>{const sample=document.querySelector('#sample');sample.textContent='She hummed old songs while breakfast warmed on rainy Sundays. We remember the easy kindness in her kitchen, the marigolds bright by the window, and the way a familiar melody could make a whole morning feel like home.';});</script>
+</body>
+</html>
