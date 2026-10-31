@@ -1,0 +1,59 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#191b2b">
+  <title>Memory Lantern — a private remembrance</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header class="topbar"><a class="brand" href="#"><span class="brand-mark">✳</span> memory lantern</a><span class="privacy"><span class="dot"></span> Private by design</span></header>
+  <main>
+    <section class="intro">
+      <div class="eyebrow"><span>✳</span> A little light for remembering</div>
+      <h1>Keep their stories<br><em>close to the light.</em></h1>
+      <p class="lede">Gather the small things you never want to forget. A local AI helps shape your words into a keepsake — right here on your own computer.</p>
+    </section>
+    <div class="layout">
+      <form id="memory-form" class="form-card">
+        <div class="card-heading"><div><span class="step">YOUR MEMORIES</span><h2>Tell me about them</h2></div><span class="little-flower">✳</span></div>
+        <label for="name">What did you call them?</label>
+        <input id="name" placeholder="e.g. Abuela, Grandpa, Jo" maxlength="80" required>
+        <label for="memory">A moment that feels like them</label>
+        <textarea id="memory" rows="4" maxlength="1500" placeholder="The way they hummed while cooking, the rainy afternoons at their house…" required></textarea>
+        <div class="row-label"><label for="favorites">Things they loved <span>(optional)</span></label></div>
+        <input id="favorites" placeholder="Marigolds, old jazz, mango candy…" maxlength="300">
+        <label for="tone">Shape the keepsake</label>
+        <select id="tone"><option value="gentle letter">A gentle letter</option><option value="short poem">A short poem</option><option value="spoken remembrance">A remembrance to read aloud</option></select>
+        <label for="model">Local model</label>
+        <select id="model"><option>gemma3:4b</option><option>llama3.2</option><option>qwen2.5:3b</option></select>
+        <button id="submit" type="submit"><span>✳</span> Light the lantern</button>
+        <p class="fineprint">Your notes stay on this device and go only to your local model. Nothing is uploaded.</p>
+        <div id="status" class="status" role="status" aria-live="polite"></div>
+      </form>
+      <section class="result-wrap" aria-label="Keepsake preview">
+        <div class="result-top"><span class="step">YOUR KEEPSAKE</span><button id="saved-toggle" class="text-button" type="button" hidden>Saved drafts</button></div>
+        <article id="keepsake" class="keepsake empty">
+          <div class="candle" aria-hidden="true"><span></span></div>
+          <div class="placeholder-title">A place for a story</div>
+          <p>Your keepsake will find its shape here.<br>Take your time — there is no rush.</p>
+          <div class="divider">✳</div>
+          <span class="card-note">MADE WITH YOUR MEMORIES</span>
+        </article>
+        <div id="actions" class="actions" hidden>
+          <button id="save" class="secondary" type="button">Save draft</button><button id="print" class="secondary" type="button">Print / save PDF</button>
+        </div>
+        <div id="drafts" class="drafts" hidden></div>
+        <p class="gentle-note">AI can get details wrong. Read through your keepsake and make it yours.</p>
+      </section>
+    </div>
+    <section class="why"><span class="why-icon">⌂</span><div><h3>Open AI. Your own machine. Your memories.</h3><p>This uses Gemma through Ollama, running locally. The model is open-weight, swappable, and works offline after download. Your family’s stories stay yours.</p></div></section>
+    <footer>Made for the stories that stay with us <span>✳</span></footer>
+  </main>
+  <script src="app.js"></script>
+</body>
+</html>
