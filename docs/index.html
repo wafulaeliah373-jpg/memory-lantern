@@ -31,14 +31,25 @@
     <p class="preview-banner"><strong>Static preview:</strong> the example below is fictional sample copy, not AI output. For real local Gemma generation, see the <a href="https://github.com/wafulaeliah373-jpg/memory-lantern#readme">setup guide</a>.</p>
     <article class="preview-card">
       <div class="candle" aria-hidden="true"></div>
-      <h2>For Nana</h2>
+      <h2 id="sampleTitle">For Nana</h2>
       <p id="sample">She hummed old songs while breakfast warmed on rainy Sundays. We remember the easy kindness in her kitchen, the marigolds bright by the window, and the way a familiar melody could make a whole morning feel like home.</p>
       <div class="divider">✳</div><span class="card-note">FICTIONAL EXAMPLE · STATIC PREVIEW</span>
     </article>
-    <button class="sample-button" id="sampleButton" type="button">Show the fictional sample again</button>
+    <button class="sample-button" id="sampleButton" type="button">Show another fictional sample</button>
     <p class="source-link">Open source, local setup, and privacy details: <a href="https://github.com/wafulaeliah373-jpg/memory-lantern">GitHub repository</a></p>
     <footer>Made for the stories that stay with us <span>✳</span></footer>
   </main>
-  <script>document.querySelector('#sampleButton').addEventListener('click',()=>{const sample=document.querySelector('#sample');sample.textContent='She hummed old songs while breakfast warmed on rainy Sundays. We remember the easy kindness in her kitchen, the marigolds bright by the window, and the way a familiar melody could make a whole morning feel like home.';});</script>
+  <script>
+    const samples = [
+      { title: 'For Nana', text: 'She hummed old songs while breakfast warmed on rainy Sundays. We remember the easy kindness in her kitchen, the marigolds bright by the window, and the way a familiar melody could make a whole morning feel like home.' },
+      { title: 'For Grandpa', text: 'He kept a little garden behind the house and always saved the ripest tomatoes for someone else. We remember his patient hands, the stories he told at dusk, and how he made ordinary afternoons feel generous.' }
+    ];
+    let sampleIndex = 0;
+    document.querySelector('#sampleButton').addEventListener('click', () => {
+      sampleIndex = (sampleIndex + 1) % samples.length;
+      document.querySelector('#sampleTitle').textContent = samples[sampleIndex].title;
+      document.querySelector('#sample').textContent = samples[sampleIndex].text;
+    });
+  </script>
 </body>
 </html>
