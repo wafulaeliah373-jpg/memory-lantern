@@ -32,3 +32,7 @@ This is a small prototype. The model may invent details, so review every line be
 ## License
 
 MIT. See [LICENSE](LICENSE).
+
+## Post-deadline maintenance
+
+The Week 4 submission was published on October 31, 2026. On November 2, 2026, after the challenge deadline, I made presentation-only updates to the hosted static preview: corrected its stylesheet and setup-guide links, then made its button switch between two clearly labeled fictional samples. These updates do not change the local Ollama/Gemma app or its AI generation behavior.
